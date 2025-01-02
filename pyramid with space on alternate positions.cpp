@@ -30,3 +30,36 @@ int main()
 
     return 0;
 }
+
+// Online C++ compiler to run C++ program online
+* * * * *
+ * * * * 
+  * * *  
+   * *   
+    *    
+
+#include <iostream>
+
+using namespace std;
+
+int main() 
+{
+    for(int i=1; i<=5; i++)
+    {
+        for(int j=1; j<10; j++)
+        {
+            if(j>=i and j<=10-i)
+            {
+                if((i%2==1 and j%2==1) or (i%2==0 and j%2==0))
+                    cout<<"*";
+                else
+                    cout<<" ";
+            }
+            else
+                cout<<" ";
+        }
+        cout<<endl;
+    }
+
+    return 0;
+}
