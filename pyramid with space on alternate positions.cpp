@@ -296,3 +296,32 @@ int main()
     }
     return 0;
 }
+
+// Online C++ compiler to run C++ program online
+    1
+   212
+  32123
+ 4321234
+543212345
+
+#include <iostream>
+
+using namespace std;
+
+int main() 
+{
+    int n=5;
+    for(int i=1; i<=n; i++)
+    {
+        for(int space=1; space<=n-i; space++)  // More Efficient ! ! ! Printing, we embedded the logic in the for loop itself. largely eliminating the need for nested if-else. 
+            cout<<" ";
+        for(int j=i; j>=1; j--)
+            cout<<j;
+        for(int j=2; j<=i; j++)
+            cout<<j;
+        // for(int space=n+i; space<2*n; space++)  // Also the loop wont run 5*5 = 25 times, the spaces right after the pyramid are ignored, hence reducing the no.of times loop iterates.
+        //     cout<<" ";
+        cout<<endl;
+    }
+    return 0;
+}
