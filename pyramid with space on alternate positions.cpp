@@ -184,3 +184,47 @@ int main()
 
     return 0;
 }
+
+// Online C++ compiler to run C++ program online
+    1    
+   212   
+  32123  
+ 4321234 
+543212345
+ 4321234 
+  32123  
+   212   
+    1    
+
+#include <iostream>
+
+using namespace std;
+
+int main() 
+{
+    int n=5;
+    for(int i=1; i<2*n; i++)
+    {
+        for(int j=1; j<2*n; j++)
+        {
+            if(i<=n)
+                if(j>n-i and j<n+i)
+                    if(j<=n)
+                        cout<<n-j+1;
+                    else
+                        cout<<j-n+1;
+                else
+                    cout<<" ";
+            else
+                if(j>i-n and j<(2*n)-(i-n))
+                    if(j<=n)
+                        cout<<n-j+1;
+                    else
+                        cout<<j-n+1;
+                else
+                    cout<<" ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
