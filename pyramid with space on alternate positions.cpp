@@ -368,3 +368,50 @@ int main()
     }
     return 0;
 }
+
+// Online C++ compiler to run C++ program online
+6 6 6 6 6 6 6 6 6 6 6 
+6 5 5 5 5 5 5 5 5 5 6 
+6 5 4 4 4 4 4 4 4 5 6 
+6 5 4 3 3 3 3 3 4 5 6 
+6 5 4 3 2 2 2 3 4 5 6 
+6 5 4 3 2 1 2 3 4 5 6 
+6 5 4 3 2 2 2 3 4 5 6 
+6 5 4 3 3 3 3 3 4 5 6 
+6 5 4 4 4 4 4 4 4 5 6 
+6 5 5 5 5 5 5 5 5 5 6 
+6 6 6 6 6 6 6 6 6 6 6 
+   
+#include <iostream>
+
+using namespace std;
+
+int min(int x, int y)
+{
+    if(x>y)
+        return y;
+    else
+        return x;
+}
+int main() 
+{
+    int n=6;
+    int index;
+    for(int i=1; i<2*n; i++)
+    {
+        for(int j=1; j<2*n; j++)
+        {
+            if(i>n)
+                index=min(2*n-i,j);
+            if(j>n)
+                index=min(i,2*n-j);
+            if(i>n and j>n)
+                index=min(2*n-i,2*n-j);
+            if(i<=n and j<=n)
+                index=min(i,j);
+            cout<<n+1-index<<" "; // Same logic as previous problem, simply subtract the number from n+1 to make the oder reverse.
+        }
+        cout<<endl;
+    }
+    return 0;
+}
