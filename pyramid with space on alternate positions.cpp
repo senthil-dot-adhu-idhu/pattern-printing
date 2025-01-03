@@ -325,3 +325,46 @@ int main()
     }
     return 0;
 }
+
+// Online C++ compiler to run C++ program online
+1 1 1 1 1 1 1 
+1 2 2 2 2 2 1 
+1 2 3 3 3 2 1 
+1 2 3 4 3 2 1 
+1 2 3 3 3 2 1 
+1 2 2 2 2 2 1 
+1 1 1 1 1 1 1
+
+#include <iostream>
+
+using namespace std;
+
+int min(int x, int y)
+{
+    if(x>y)
+        return y;
+    else
+        return x;
+}
+int main() 
+{
+    int n=4;
+    int index;
+    for(int i=1; i<2*n; i++)
+    {
+        for(int j=1; j<2*n; j++)
+        {
+            if(i>4)
+                index=min(2*n-i,j);
+            if(j>4)
+                index=min(i,2*n-j);
+            if(i>4 and j>4)
+                index=min(2*n-i,2*n-j); // if i or j is greater than n, then 2n-i/j to make the pattern similar.
+            if(i<=4 and j<=4)
+                index=min(i,j); // finding the minimum distance from the nearest of 4 borders, here it is the minimum value of (i,j)
+            cout<<index<<" ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
