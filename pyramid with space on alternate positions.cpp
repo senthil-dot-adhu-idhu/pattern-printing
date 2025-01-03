@@ -267,3 +267,32 @@ int main()
     }
     return 0;
 }
+
+// Online C++ compiler to run C++ program online
+1
+01
+101
+0101
+10101
+
+#include <iostream>
+
+using namespace std;
+
+int main() 
+{
+    // int n=5;
+    for(int i=1; i<=5; i++)
+    {
+        for(int j=1; j<=i; j++)
+        {
+            if((i+j)%2==0) // Can be done this way also instead of writing 
+            // if((i%2==0 and j%2==0) or (i%2==1 and j%2==1)) --> Like this !!! Refer previous problem for this type of if() statements.
+                cout<<"1";
+            else
+                cout<<"0";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
