@@ -354,13 +354,13 @@ int main()
     {
         for(int j=1; j<2*n; j++)
         {
-            if(i>4)
-                index=min(2*n-i,j);
-            if(j>4)
-                index=min(i,2*n-j);
-            if(i>4 and j>4)
+            if(i>n)
+                index=min(2*n-i,j);  // n=4
+            if(j>n)
+                index=min(i,2*n-j);  // n=4
+            if(i>n and j>n)
                 index=min(2*n-i,2*n-j); // if i or j is greater than n, then 2n-i/j to make the pattern similar.
-            if(i<=4 and j<=4)
+            if(i<=n and j<=n)
                 index=min(i,j); // finding the minimum distance from the nearest of 4 borders, here it is the minimum value of (i,j)
             cout<<index<<" ";
         }
@@ -401,14 +401,7 @@ int main()
     {
         for(int j=1; j<2*n; j++)
         {
-            if(i>n)
-                index=min(2*n-i,j);
-            if(j>n)
-                index=min(i,2*n-j);
-            if(i>n and j>n)
-                index=min(2*n-i,2*n-j);
-            if(i<=n and j<=n)
-                index=min(i,j);
+            index=min(min(i,j),min(2*n-i,2*n-j)); // Instead of multiple if cases, we handed over the headache of comapring to the function.
             cout<<n+1-index<<" "; // Same logic as previous problem, simply subtract the number from n+1 to make the oder reverse.
         }
         cout<<endl;
