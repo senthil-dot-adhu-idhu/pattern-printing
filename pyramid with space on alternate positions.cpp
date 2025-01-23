@@ -110,6 +110,44 @@ int main()
 }
 
 // Online C++ compiler to run C++ program online
+
+// P     P
+//  R   R 
+//   O O  
+//   G   
+//   R R  
+//  A   A 
+// M     M
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+ 
+int main() 
+{
+    string s = "PROGRAM";
+    
+    int size = s.length();
+    
+    int array[size-1][size-1];
+    
+    for(int i = 0; i < size; i++)
+    {
+        for(int j = 0; j < size; j++)
+        {
+            if(i==j || i+j==size-1)
+                cout<<s[i];
+            else
+                cout<<" ";
+        }
+        cout<<endl;
+    }
+
+    return 0;
+}
+
+// Online C++ compiler to run C++ program online
     *    
    * *   
   *   *  
